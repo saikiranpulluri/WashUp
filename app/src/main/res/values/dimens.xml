@@ -3,4 +3,12 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_bar_width">240dp</dimen>
+    <dimen name="status_bar_size">24dp</dimen>
+    <dimen name="margin_bottom">8dp</dimen>
+    <dimen name="nav_left_margin">16dp</dimen>
+    <dimen name="nav_image_top_margin">16dp</dimen>
+    <dimen name="subtitle_height">56dp</dimen>
+    <dimen name="linear_layout_nav_bar">56dp</dimen>
+    <dimen name="nav_image_bottom_margin">5dp</dimen>
+    <dimen name="app_bar_top_padding">0dp</dimen>
 </resources>
