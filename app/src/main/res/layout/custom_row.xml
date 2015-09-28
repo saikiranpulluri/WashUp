@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/nav_bar_image_left_margin"
-        android:layout_marginRight="@dimen/nav_bar_image_right_margin"/>
+        android:layout_marginRight="@dimen/nav_bar_image_right_margin"
+        android:contentDescription="@string/nav_bar_image_content_decrip" />
 
     <TextView
         android:id="@+id/listCaption"
