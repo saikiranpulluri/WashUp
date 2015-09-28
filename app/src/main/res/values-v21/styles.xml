@@ -7,6 +7,8 @@
         <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
         <item name="colorAccent">@color/accentColor</item>
         <item name="android:windowTranslucentStatus">true</item>
-
+        <item name="android:colorControlHighlight">@color/colorHightlight</item>
     </style>
+
+    <color name="colorHightlight">#b6b6b6</color>
 </resources>

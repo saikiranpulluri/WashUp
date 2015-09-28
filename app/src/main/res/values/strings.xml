@@ -13,4 +13,11 @@
     <string name="drawer_close">Close</string>
     <string name="nav_bar_image_content_decrip">action icon</string>
     <string name="title_activity_addresses">AddressesActivity</string>
+
+    <string-array name="tabs">
+        <item>Men</item>
+        <item>Women</item>
+        <item>Children</item>
+        <item>Others</item>
+    </string-array>
 </resources>

@@ -7,16 +7,29 @@
     android:background="@color/material_white"
     android:id="@+id/drawer_layout">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context="in.lworks.washup.MainActivity">
 
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
-    </RelativeLayout>
+        <tabs.SlidingTabLayout
+            android:id="@+id/gender_selection_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </tabs.SlidingTabLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
 
     <fragment
         android:id="@+id/fragment_navigation_drawer"
