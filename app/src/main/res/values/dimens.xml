@@ -11,4 +11,8 @@
     <dimen name="linear_layout_nav_bar">56dp</dimen>
     <dimen name="nav_image_bottom_margin">5dp</dimen>
     <dimen name="app_bar_top_padding">0dp</dimen>
+    <dimen name="nav_bar_item_height">48dp</dimen>
+    <dimen name="nav_bar_image_left_margin">16dp</dimen>
+    <dimen name="nav_bar_image_right_margin">16dp</dimen>
+    <dimen name="text_nav_bar_left_margin">72dp</dimen>
 </resources>

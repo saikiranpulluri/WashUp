@@ -30,25 +30,33 @@
             android:orientation="vertical">
 
             <TextView
-                android:gravity="center_horizontal"
                 android:id="@+id/customer_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Saikiran Pulluri"/>
+                android:gravity="center_horizontal"
+                android:text="Saikiran Pulluri" />
 
             <TextView
                 android:id="@+id/customer_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="psk.knr@gmail.com"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:text="psk.knr@gmail.com" />
+
             <TextView
                 android:id="@+id/customer_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+91-9030955263"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:text="+91-9030955263" />
         </LinearLayout>
     </RelativeLayout>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container">
+
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>
