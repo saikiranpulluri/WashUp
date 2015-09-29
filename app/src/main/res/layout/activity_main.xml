@@ -17,6 +17,13 @@
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:src="@drawable/tab1"
+            android:scaleType="fitXY"/>
+
         <tabs.SlidingTabLayout
             android:id="@+id/gender_selection_tab"
             android:layout_width="match_parent"
@@ -26,7 +33,7 @@
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
         </android.support.v4.view.ViewPager>
     </LinearLayout>
