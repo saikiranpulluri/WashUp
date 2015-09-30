@@ -9,7 +9,8 @@
     </item>
     <item>
         <shape>
-            <solid android:color="@color/primaryColor"/>
+            <solid android:color="@color/transparent"/>
         </shape>
     </item>
 </ripple>
+

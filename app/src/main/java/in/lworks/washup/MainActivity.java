@@ -2,18 +2,15 @@ package in.lworks.washup;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -57,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
 //            }
 //        });
         mTabs.setSelectedIndicatorColors(getResources().getColor(R.color.accentColor));
-//      mTabs.setBackgroundColor(getResources().getColor(R.color.primaryColor));
+        mTabs.setBackgroundColor(getResources().getColor(R.color.transparent));
         mTabs.setViewPager(mPager);
     }
 
@@ -87,6 +84,7 @@ public class MainActivity extends ActionBarActivity {
     public static class MyFragment extends Fragment {
 
         private TextView textView;
+        int drawables[]={R.drawable.tab1,R.drawable.tab2,R.drawable.tab3,R.drawable.tab3};
 
         public static MyFragment getInstance(int position) {
             MyFragment myFragment = new MyFragment();
@@ -102,10 +100,16 @@ public class MainActivity extends ActionBarActivity {
             textView = (TextView) layout.findViewById(R.id.position);
             Bundle bundle=getArguments();
             if(bundle!=null){
-                textView.setText(bundle.getInt("position")+"");
+                getActivity().findViewById(R.id.tabLayoutBackground).setBackgroundDrawable(setBackGround(bundle.getInt("position")));
+                textView.setText(bundle.getInt("position") + "");
+                Log.i("LWORKS_TAG", bundle.getInt("position") + "");
             }
 
             return layout;
+        }
+
+        private Drawable setBackGround(int position) {
+                return getResources().getDrawable(drawables[position]);
         }
     }
 
@@ -121,12 +125,14 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public CharSequence getPageTitle(int position) {
 
-            Drawable drawable=getResources().getDrawable(icons[position]);
-            drawable.setBounds(0,0,36,36);
-            ImageSpan imageSpan=new ImageSpan(drawable);
-            SpannableString spannableString=new SpannableString(tabs[position]);
-            spannableString.setSpan(imageSpan,0,spannableString.length(), Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-            return spannableString;
+//            Drawable drawable=getResources().getDrawable(icons[position]);
+//            drawable.setBounds(0,0,36,36);
+//            ImageSpan imageSpan=new ImageSpan(drawable);
+//            SpannableString spannableString=new SpannableString(tabs[position]);
+//            spannableString.setSpan(imageSpan,0,spannableString.length(), Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+//            return spannableString;
+
+            return tabs[position];
         }
 
         @Override

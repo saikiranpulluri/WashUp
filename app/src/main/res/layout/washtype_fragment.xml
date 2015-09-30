@@ -8,5 +8,4 @@
     android:textSize="20sp"
     android:gravity="center"
     android:text="Page Number 1">
-
 </TextView>
