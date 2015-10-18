@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import tabs.SlidingTabLayout;
@@ -84,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
     public static class MyFragment extends Fragment {
 
         private TextView textView;
+        private ListView washTypes;
         int drawables[]={R.drawable.tab1,R.drawable.tab2,R.drawable.tab3,R.drawable.tab3};
 
         public static MyFragment getInstance(int position) {
@@ -98,6 +101,13 @@ public class MainActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View layout = inflater.inflate(R.layout.washtype_fragment, container, false);
             textView = (TextView) layout.findViewById(R.id.position);
+            washTypes = (ListView) layout.findViewById(R.id.washTypes);
+
+            ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.wash_types, R.layout.wash_type_list_item);
+            washTypes.setAdapter(adapter);
+
+            textView.setVisibility(View.GONE);
+
             Bundle bundle=getArguments();
             if(bundle!=null){
                 getActivity().findViewById(R.id.tabLayoutBackground).setBackgroundDrawable(setBackGround(bundle.getInt("position")));
